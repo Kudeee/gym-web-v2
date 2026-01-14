@@ -40,4 +40,4 @@ links.forEach((link) => {
 });
 
 // Load default page
-loadPage("classes");
+loadPage("dashboard");

@@ -11,14 +11,19 @@ body {
 }
 
 button {
+  width: 120px;
+  height: 50px;
   background: #172646;
   color: white;
- cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
-button:hover{
-    background: #1f2933;
-    color: #fff;
+button:hover {
+  background: #1f2933;
+  color: #fff;
 }
 
 .sidebar {
@@ -85,6 +90,7 @@ button:hover{
   padding: 18px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  margin-bottom: 15px;
 }
 .card h3 {
   margin: 0 0 8px;
@@ -96,14 +102,10 @@ button:hover{
   color: #555;
 }
 
-.card button {
-    width: 100px;
-    height: 50px;
-    background: #172646;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    margin-right: 15px;
+.card form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Table */
@@ -132,14 +134,11 @@ tr:not(:last-child) {
 
 /* Form */
 
-
-
 .form {
   max-width: 420px;
   background: #fff;
   padding: 20px;
   margin-bottom: 15px;
-  margin-left: 210px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
@@ -151,21 +150,38 @@ tr:not(:last-child) {
   border: 1px solid #ddd;
 }
 
-.form button {
- width: 100px;
+.form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
 }
 
-.scheduleClass-btn{
- display: flex;
- justify-content: end;
-
+.option-bar {
+  margin-bottom: 20px;
 }
 
 .option-bar button {
-    width: 100px;
-    height: 50px;
-    border: none;
-    border-radius: 20px;
-    margin-right: 15px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 15px;
 }
 
+.scheduleClass-btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+p.stat-status {
+  color: green;
+}
