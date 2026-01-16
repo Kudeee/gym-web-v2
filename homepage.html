@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/homepage.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <header class="header header-js"></header>
+
+    <div class="container">
+      <div class="status-section">
+        <div class="status-info">
+          <h2>Welcome Back, Ben!</h2>
+          <div class="status-badges">
+            <span class="badge badge-active">✓ Active</span>
+            <span class="badge badge-premium">Premium Member</span>
+          </div>
+          <div class="status-details">
+            <div class="status-item">
+              <div>
+                <div class="status-label">Next Billing</div>
+                <div class="status-value">Feb 16, 2026</div>
+              </div>
+            </div>
+            <div class="status-item">
+              <div>
+                <div class="status-label">Days Remaining</div>
+                <div class="status-value">31 Days</div>
+              </div>
+            </div>
+            <div class="status-item">
+              <div>
+                <div class="status-label">Plan</div>
+                <div class="status-value">Premium</div>
+              </div>
+            </div>
+            <div class="status-item">
+              <div>
+                <div class="status-label">Streak</div>
+                <div class="status-value">7 Days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="status-actions">
+          <button class="btn">Renew Now</button>
+          <button class="btn btn-outline">Upgrade to Elite</button>
+          <button class="btn btn-secondary">Pause Membership</button>
+        </div>
+      </div>
+
+      <div class="next-action-section">
+        <div class="next-action-content">
+          <div class="next-action-label">Your Next Class</div>
+          <h2 class="next-action-title">HIIT TRAINING</h2>
+          <div class="class-info-grid">
+            <div class="class-info-item">
+              <div class="class-info-value">9:00 AM</div>
+              <div class="class-info-label">Time</div>
+            </div>
+            <div class="class-info-item">
+              <div class="class-info-value">Today</div>
+              <div class="class-info-label">Date</div>
+            </div>
+            <div class="class-info-item">
+              <div class="class-info-value">Emma R.</div>
+              <div class="class-info-label">Trainer</div>
+            </div>
+            <div class="class-info-item">
+              <div class="class-info-value">50 min</div>
+              <div class="class-info-label">Duration</div>
+            </div>
+          </div>
+          <div class="action-buttons">
+            <button class="btn">Join Class Now</button>
+            <button class="btn btn-outline">Cancel Booking</button>
+            <button class="btn btn-secondary">Book Another</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-actions-section">
+        <h2 class="section-title">Quick Actions</h2>
+        <div class="quick-actions-grid">
+          <div class="quick-action-card" onclick="alert('Book a Class')">
+            <div class="quick-action-icon">
+                <img src="assests/icons/calendar2-plus-fill.svg" alt="">
+            </div>
+            <div class="quick-action-label">Book a Class</div>
+          </div>
+          <div class="quick-action-card" onclick="alert('View Schedule')">
+            <div class="quick-action-icon">️
+                <img src="assests/icons/calendar-week-fill.svg" alt="">
+            </div>
+            <div class="quick-action-label">View Schedule</div>
+          </div>
+          <div class="quick-action-card" onclick="alert('Book Trainer')">
+            <div class="quick-action-icon">
+                <img src="assests/icons/person-fill.svg" alt="">
+            </div>
+            <div class="quick-action-label">Book Trainer</div>
+          </div>
+          <div class="quick-action-card" onclick="alert('My Membership')">
+            <div class="quick-action-icon">
+                <img src="assests/icons/credit-card-fill.svg" alt="">
+            </div>
+            <div class="quick-action-label">My Membership</div>
+          </div>
+          <div class="quick-action-card" onclick="alert('Payments')">
+            <div class="quick-action-icon">
+                <img src="assests/icons/cash.svg" alt="">
+            </div>
+            <div class="quick-action-label">Payments</div>
+          </div>
+          <div class="quick-action-card" onclick="alert('Attendance History')">
+            <div class="quick-action-icon">
+                <img src="assests/icons/clipboard-data-fill.svg" alt="">
+            </div>
+            <div class="quick-action-label">Attendance</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="events-section">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="events-tabs">
+          <button class="tab active">My Events</button>
+          <button class="tab">Suggested</button>
+        </div>
+        <div class="event-item">
+          <div class="event-date">
+            <div class="event-day">25</div>
+            <div class="event-month">JAN</div>
+          </div>
+          <div class="event-details">
+            <div class="event-title">Fitness Challenge Kickoff</div>
+            <div class="event-meta">
+              📍 Main Studio • ⏰ 6:00 PM • ✓ Registered
+            </div>
+          </div>
+          <button class="btn">View Details</button>
+        </div>
+        <div class="event-item">
+          <div class="event-date">
+            <div class="event-day">15</div>
+            <div class="event-month">FEB</div>
+          </div>
+          <div class="event-details">
+            <div class="event-title">Nutrition Workshop</div>
+            <div class="event-meta">
+              📍 Conference Room • ⏰ 2:00 PM • Suggested for you
+            </div>
+          </div>
+          <button class="btn btn-outline">Register</button>
+        </div>
+      </div>
+
+      <div class="progress-section">
+        <div class="progress-card">
+          <h3>Recent Workouts</h3>
+          <ul class="recent-workouts">
+            <li>
+              <span>Strength Training</span>
+              <span style="font-weight: 600; color: #ff6b35">Today</span>
+            </li>
+            <li>
+              <span>HIIT Class</span>
+              <span style="font-weight: 600; color: #ff6b35">Yesterday</span>
+            </li>
+            <li>
+              <span>Yoga Flow</span>
+              <span style="font-weight: 600; color: #ff6b35">Jan 14</span>
+            </li>
+          </ul>
+        </div>
+        <div class="progress-card">
+          <h3>Body Stats</h3>
+          <div style="margin-bottom: 15px">
+            <div style="font-size: 1.2rem; font-weight: 700">Weight</div>
+            <div style="font-size: 1.8rem; font-weight: 900; color: #ff6b35">
+              175 lbs
+            </div>
+            <div style="font-size: 0.85rem; color: #4caf50">
+              ↓ 5 lbs this month
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alerts-section">
+        <h2 class="section-title">Alerts & Notifications</h2>
+        <div class="alert alert-success">
+          <span class="alert-icon">✅</span>
+          <div class="alert-content">
+            <div class="alert-title">Class Booked Successfully</div>
+            <div class="alert-message">
+              You're registered for HIIT Training tomorrow at 9:00 AM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="js/header.js"></script>
+</html>

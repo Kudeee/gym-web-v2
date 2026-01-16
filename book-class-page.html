@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/book-class-page.css" />
+    <title>Book a Class</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">FIT<span>LIFE</span></div>
+        <ul class="header-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+        </ul>
+        <div class="user-profile">
+          <div>
+            <div style="font-weight: 600">John Doe</div>
+            <div style="font-size: 0.85rem; color: #ff6b35">Premium Member</div>
+          </div>
+          <div class="user-avatar">JD</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="booking-layout">
+        <div class="booking-steps">
+          <div class="step-indicator">
+            <div class="step active" id="step1Indicator">
+              <div class="step-number">1</div>
+              <div class="step-label">Choose Class</div>
+            </div>
+            <div class="step" id="step2Indicator">
+              <div class="step-number">2</div>
+              <div class="step-label">Select Date</div>
+            </div>
+            <div class="step" id="step3Indicator">
+              <div class="step-number">3</div>
+              <div class="step-label">Pick Time</div>
+            </div>
+            <div class="step" id="step4Indicator">
+              <div class="step-number">4</div>
+              <div class="step-label">Confirm</div>
+            </div>
+          </div>
+
+          <!-- Step 1: Choose Class -->
+          <div id="step1" class="step-content active">
+            <h2 class="section-title">Choose Your Class</h2>
+            <div class="class-grid">
+              <div class="class-option" onclick="selectClass('HIIT Training')">
+                <div class="class-icon">🔥</div>
+                <div class="class-name">HIIT Training</div>
+                <div class="class-description">
+                  High-intensity interval training for maximum calorie burn
+                </div>
+              </div>
+              <div class="class-option" onclick="selectClass('Yoga Flow')">
+                <div class="class-icon">🧘</div>
+                <div class="class-name">Yoga Flow</div>
+                <div class="class-description">
+                  Mind-body connection through flowing movements
+                </div>
+              </div>
+              <div class="class-option" onclick="selectClass('CrossFit')">
+                <div class="class-icon">🏋️</div>
+                <div class="class-name">CrossFit</div>
+                <div class="class-description">
+                  Functional fitness and strength training
+                </div>
+              </div>
+              <div class="class-option" onclick="selectClass('Boxing')">
+                <div class="class-icon">🥊</div>
+                <div class="class-name">Boxing</div>
+                <div class="class-description">
+                  Combat training for fitness and confidence
+                </div>
+              </div>
+              <div class="class-option" onclick="selectClass('Spin Class')">
+                <div class="class-icon">🚴</div>
+                <div class="class-name">Spin Class</div>
+                <div class="class-description">
+                  Indoor cycling for cardio endurance
+                </div>
+              </div>
+              <div class="class-option" onclick="selectClass('Pilates')">
+                <div class="class-icon">💪</div>
+                <div class="class-name">Pilates</div>
+                <div class="class-description">
+                  Core strength and body alignment
+                </div>
+              </div>
+            </div>
+            <div class="action-buttons">
+              <button class="btn btn-primary" onclick="nextStep(2)">
+                Next: Select Date
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Select Date -->
+          <div id="step2" class="step-content">
+            <h2 class="section-title">Select Date</h2>
+            <div class="date-selector">
+              <div class="date-grid">
+                <div class="date-option" onclick="selectDate('Mon, Jan 20')">
+                  <div class="date-day">Mon</div>
+                  <div class="date-number">20</div>
+                </div>
+                <div class="date-option" onclick="selectDate('Tue, Jan 21')">
+                  <div class="date-day">Tue</div>
+                  <div class="date-number">21</div>
+                </div>
+                <div class="date-option" onclick="selectDate('Wed, Jan 22')">
+                  <div class="date-day">Wed</div>
+                  <div class="date-number">22</div>
+                </div>
+                <div class="date-option" onclick="selectDate('Thu, Jan 23')">
+                  <div class="date-day">Thu</div>
+                  <div class="date-number">23</div>
+                </div>
+                <div class="date-option" onclick="selectDate('Fri, Jan 24')">
+                  <div class="date-day">Fri</div>
+                  <div class="date-number">24</div>
+                </div>
+                <div class="date-option" onclick="selectDate('Sat, Jan 25')">
+                  <div class="date-day">Sat</div>
+                  <div class="date-number">25</div>
+                </div>
+                <div class="date-option" onclick="selectDate('Sun, Jan 26')">
+                  <div class="date-day">Sun</div>
+                  <div class="date-number">26</div>
+                </div>
+              </div>
+            </div>
+            <div class="action-buttons">
+              <button class="btn btn-secondary" onclick="prevStep(1)">
+                Back
+              </button>
+              <button class="btn btn-primary" onclick="nextStep(3)">
+                Next: Pick Time
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Pick Time -->
+          <div id="step3" class="step-content">
+            <h2 class="section-title">Pick Time Slot</h2>
+            <div class="time-slots">
+              <div class="time-slot" onclick="selectTime('6:00 AM')">
+                <div class="time-text">6:00 AM</div>
+                <div class="time-spots">8 spots left</div>
+              </div>
+              <div class="time-slot" onclick="selectTime('9:00 AM')">
+                <div class="time-text">9:00 AM</div>
+                <div class="time-spots">3 spots left</div>
+              </div>
+              <div class="time-slot" onclick="selectTime('12:00 PM')">
+                <div class="time-text">12:00 PM</div>
+                <div class="time-spots">5 spots left</div>
+              </div>
+              <div class="time-slot full">
+                <div class="time-text">3:00 PM</div>
+                <div class="time-spots">Full</div>
+              </div>
+              <div class="time-slot" onclick="selectTime('5:00 PM')">
+                <div class="time-text">5:00 PM</div>
+                <div class="time-spots">2 spots left</div>
+              </div>
+              <div class="time-slot" onclick="selectTime('7:00 PM')">
+                <div class="time-text">7:00 PM</div>
+                <div class="time-spots">6 spots left</div>
+              </div>
+            </div>
+            <div class="action-buttons">
+              <button class="btn btn-secondary" onclick="prevStep(2)">
+                Back
+              </button>
+              <button class="btn btn-primary" onclick="nextStep(4)">
+                Next: Confirm
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4: Confirm -->
+          <div id="step4" class="step-content">
+            <h2 class="section-title">Additional Information</h2>
+            <div class="form-group">
+              <label class="form-label">Special Requirements (Optional)</label>
+              <textarea
+                class="form-textarea"
+                placeholder="Any injuries, limitations, or special requests..."
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Emergency Contact</label>
+              <input type="text" class="form-input" placeholder="Name" />
+              <input
+                type="tel"
+                class="form-input"
+                placeholder="Phone Number"
+                style="margin-top: 10px"
+              />
+            </div>
+            <div class="action-buttons">
+              <button class="btn btn-secondary" onclick="prevStep(3)">
+                Back
+              </button>
+              <button class="btn btn-primary" onclick="confirmBooking()">
+                Confirm Booking
+              </button>
+            </div>
+          </div>
+
+          <!-- Success Message -->
+          <div id="successMessage" class="step-content">
+            <div class="success-message">
+              <div class="success-icon">✅</div>
+              <h2 class="success-title">Booking Confirmed!</h2>
+              <p class="success-text">
+                You're all set for your class. We've sent a confirmation email
+                with all the details.
+              </p>
+              <button class="btn btn-primary" onclick="location.href='#home'">
+                Back to Home
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-summary">
+          <h3 class="summary-title">Booking Summary</h3>
+          <div class="summary-item">
+            <div class="summary-label">Class</div>
+            <div class="summary-value" id="summaryClass">-</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-label">Date</div>
+            <div class="summary-value" id="summaryDate">-</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-label">Time</div>
+            <div class="summary-value" id="summaryTime">-</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-label">Duration</div>
+            <div class="summary-value">50 minutes</div>
+          </div>
+          <div class="summary-price">
+            <div class="price-label">Total Price</div>
+            <div class="price-value">FREE</div>
+            <div style="font-size: 0.85rem; color: #666; margin-top: 5px">
+              Included in Premium Plan
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

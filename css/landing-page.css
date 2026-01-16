@@ -1,14 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
+@import url("general.css");
 
 .container {
   max-width: 1200px;
@@ -75,7 +65,7 @@ section:first-of-type {
 
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/><text x="50%" y="50%" font-size="48" fill="%23666" text-anchor="middle">Gym Hero Image</text></svg>');
+    url('../assests/images/hero-image.webp');
   background-size: cover;
   background-position: center;
   color: white;
@@ -161,7 +151,7 @@ h2 {
   align-items: center;
 }
 
-.profile-image {
+.profile-image img{
   background: #ddd;
   height: 400px;
   border-radius: 10px;
@@ -242,7 +232,7 @@ h2 {
   text-align: center;
 }
 
-.trainer-image {
+.trainer-image img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -285,7 +275,8 @@ h2 {
   cursor: pointer;
 }
 
-.blog-image {
+.blog-image img{
+  width: 300px; 
   height: 200px;
   background: #ddd;
   border-radius: 10px;
@@ -293,6 +284,18 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.blog-card a {
+  color: white;
+  text-decoration: none;
+  background: #ff6b35;
+  padding: 5px 7px;
+  border-radius: 8px;
+}
+
+.blog-card p {
+  margin-bottom: 10px;
 }
 
 .contact-form {

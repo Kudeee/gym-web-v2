@@ -3,24 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/landing-page.css">
-    <title>gymburat</title>
+    <link rel="stylesheet" href="css/landing-page.css" />
+    <title>FIT HAPPENS</title>
   </head>
   <body>
     <header>
       <nav class="container">
-        <div class="logo">GymBurat</div>
-        <button class="menu-toggle">☰</button>
+        <div class="logo">FIT HAPPENS</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#profile">Profile</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#classes">Classes</a></li>
-          <li><a href="#trainers">Trainers</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="#profile" onclick="closeMenu()">Profile</a></li>
+          <li><a href="#pricing" onclick="closeMenu()">Pricing</a></li>
+          <li><a href="#classes" onclick="closeMenu()">Classes</a></li>
+          <li><a href="#trainers" onclick="closeMenu()">Trainers</a></li>
+          <li><a href="#events" onclick="closeMenu()"">Events</a></li>
+          <li><a href="#blog" onclick="closeMenu()">Blog</a></li>
+          <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+          <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
         </ul>
       </nav>
     </header>
@@ -36,10 +36,10 @@
 
     <section id="profile">
       <div class="container">
-        <h2>about gymburat</h2>
+        <h2>About FIT HAPPENS</h2>
         <div class="profile-content">
           <div class="profile-image">
-            <span>gym interior someting something</span>
+            <img src="assests/images/gym-interior.webp" alt="">
           </div>
           <div>
             <h3>your fitness partner or something ppfft</h3>
@@ -97,7 +97,7 @@
       </div>
     </section>
 
-    <section id="schedule">
+    <section id="classes">
       <div class="container">
         <h2>Class Schedule</h2>
         <table class="sched-table">
@@ -151,16 +151,16 @@
       </div>
       <div class="grid">
         <div class="card trainer-card">
-          <div class="trainer-img">
-            <span>photo</span>
+          <div class="trainer-image">
+            <img src="assests/trainers/nadjaCole.png" alt="">
           </div>
           <h3>Nadja Colins</h3>
           <p>paragraph</p>
           <p>exp</p>
         </div>
         <div class="card trainer-card">
-          <div class="trainer-img">
-            <span>photo</span>
+          <div class="trainer-image">
+            <img src="assests/trainers/pingGuerrero.png" alt="">
           </div>
           <h3>Ping Guerrero</h3>
           <p>paragraph</p>
@@ -204,7 +204,7 @@
         <div class="grid">
           <div class="card blog-card">
             <div class="blog-image">
-              <span>blog image</span>
+              <img src="assests/images/13_25-Great-Fitness-Blog-Post-Ideas-in-2024.webp" alt="">
             </div>
             <h3>post title</h3>
             <p>date posted</p>
@@ -214,7 +214,7 @@
 
           <div class="card blog-card">
             <div class="blog-image">
-              <span>blog image</span>
+              <img src="assests/images/best-health-and-fitness-blogs.png" alt="">
             </div>
             <h3>post title</h3>
             <p>date posted</p>
@@ -224,7 +224,7 @@
 
           <div class="card blog-card">
             <div class="blog-image">
-              <span>blog image</span>
+              <img src="assests/images/What-Should-You-Eat-Before-a-Workout-1-300x200.png" alt="">
             </div>
             <h3>post title</h3>
             <p>date posted</p>
@@ -239,7 +239,7 @@
       <div class="container">
         <h2>Get in Touch</h2>
 
-        <form class="contact-form">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" required />
@@ -273,53 +273,64 @@
     <section id="faq">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
-        <div class="faq-question">
-          <span>question</span>
-          <span>+</span>
-        </div>
-        <div class="faq-answer">
-          answer
-        </div>
-
-        <div class="faq-question">
-          <span>question</span>
-          <span>+</span>
-        </div>
-        <div class="faq-answer">
-          answer
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span>question</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            answer
+          </div>
         </div>
 
-        <div class="faq-question">
-          <span>question</span>
-          <span>+</span>
-        </div>
-        <div class="faq-answer">
-          answer
-        </div>
-
-        <div class="faq-question">
-          <span>question</span>
-          <span>+</span>
-        </div>
-        <div class="faq-answer">
-          answer
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span>question</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            answer
+          </div>
         </div>
 
-        <div class="faq-question">
-          <span>question</span>
-          <span>+</span>
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span>question</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            answer
+          </div>
         </div>
-        <div class="faq-answer">
-          answer
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span>question</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            answer
+          </div>
         </div>
-      </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span>question</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            answer
+          </div>
+        </div>
     </section>
 
     <footer>
       <div class="container">
-       <p>some info</p> 
-       <p>some info</p>
+        <p>some info</p>
+        <p>some info</p>
       </div>
     </footer>
   </body>
+
+  <script src="js/landing-page.js"></script>
 </html>

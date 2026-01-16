@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/book-trainer-page.css" />
+    <title>Book a Trainer</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">FIT<span>LIFE</span></div>
+        <ul class="header-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+        </ul>
+        <div class="user-profile">
+          <div>
+            <div style="font-weight: 600">John Doe</div>
+            <div style="font-size: 0.85rem; color: #ff6b35">Premium Member</div>
+          </div>
+          <div class="user-avatar">JD</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="booking-layout">
+        <div class="booking-steps">
+          <div class="step-indicator">
+            <div class="step active" id="step1Indicator">
+              <div class="step-number">1</div>
+              <div class="step-label">Choose Trainer</div>
+            </div>
+            <div class="step" id="step2Indicator">
+              <div class="step-number">2</div>
+              <div class="step-label">Session Type</div>
+            </div>
+            <div class="step" id="step3Indicator">
+              <div class="step-number">3</div>
+              <div class="step-label">Schedule</div>
+            </div>
+            <div class="step" id="step4Indicator">
+              <div class="step-number">4</div>
+              <div class="step-label">Details</div>
+            </div>
+          </div>
+
+          <!-- Step 1: Choose Trainer -->
+          <div id="step1" class="step-content active">
+            <h2 class="section-title">Choose Your Trainer</h2>
+            <div class="trainer-select-grid">
+              <div
+                class="trainer-option"
+                onclick="selectTrainer('Emma Rodriguez', 'HIIT & CrossFit', '75')"
+              >
+                <div class="trainer-photo"></div>
+                <div class="trainer-details">
+                  <h3>Emma Rodriguez</h3>
+                  <div class="trainer-specialty">
+                    HIIT & CrossFit Specialist
+                  </div>
+                  <div class="trainer-stats">
+                    <span>⭐ 4.9 Rating</span>
+                    <span>🏋️ 8+ Years</span>
+                    <span>👥 200+ Clients</span>
+                  </div>
+                </div>
+                <div class="trainer-price">
+                  <div class="price-value">$75</div>
+                  <div class="price-label">/session</div>
+                </div>
+              </div>
+
+              <div
+                class="trainer-option"
+                onclick="selectTrainer('Mike Chen', 'Strength & Conditioning', '80')"
+              >
+                <div class="trainer-photo"></div>
+                <div class="trainer-details">
+                  <h3>Mike Chen</h3>
+                  <div class="trainer-specialty">Strength & Conditioning</div>
+                  <div class="trainer-stats">
+                    <span>⭐ 5.0 Rating</span>
+                    <span>🏋️ 12+ Years</span>
+                    <span>👥 300+ Clients</span>
+                  </div>
+                </div>
+                <div class="trainer-price">
+                  <div class="price-value">$80</div>
+                  <div class="price-label">/session</div>
+                </div>
+              </div>
+
+              <div
+                class="trainer-option"
+                onclick="selectTrainer('Sarah Johnson', 'Yoga & Pilates', '70')"
+              >
+                <div class="trainer-photo"></div>
+                <div class="trainer-details">
+                  <h3>Sarah Johnson</h3>
+                  <div class="trainer-specialty">Yoga & Pilates Expert</div>
+                  <div class="trainer-stats">
+                    <span>⭐ 4.9 Rating</span>
+                    <span>🏋️ 10+ Years</span>
+                    <span>👥 250+ Clients</span>
+                  </div>
+                </div>
+                <div class="trainer-price">
+                  <div class="price-value">$70</div>
+                  <div class="price-label">/session</div>
+                </div>
+              </div>
+            </div>
+            <div class="action-buttons">
+              <button class="btn btn-primary" onclick="nextStep(2)">
+                Next: Session Type
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Session Type -->
+          <div id="step2" class="step-content">
+            <h2 class="section-title">Choose Session Type</h2>
+            <div class="session-type-grid">
+              <div
+                class="session-option"
+                onclick="selectSession('30 Min', '30', '1')"
+              >
+                <div class="session-duration">30</div>
+                <div class="session-label">Minutes</div>
+                <div class="session-price">Base Price</div>
+              </div>
+              <div
+                class="session-option"
+                onclick="selectSession('60 Min', '60', '1.5')"
+              >
+                <div class="session-duration">60</div>
+                <div class="session-label">Minutes</div>
+                <div class="session-price">+50%</div>
+              </div>
+              <div
+                class="session-option"
+                onclick="selectSession('90 Min', '90', '2')"
+              >
+                <div class="session-duration">90</div>
+                <div class="session-label">Minutes</div>
+                <div class="session-price">+100%</div>
+              </div>
+            </div>
+
+            <h3
+              style="
+                font-size: 1.2rem;
+                font-weight: 700;
+                margin-bottom: 15px;
+                margin-top: 30px;
+              "
+            >
+              Focus Area
+            </h3>
+            <div class="form-group">
+              <select class="form-select" id="focusArea">
+                <option>Select focus area...</option>
+                <option>Weight Loss</option>
+                <option>Muscle Building</option>
+                <option>Strength Training</option>
+                <option>Flexibility</option>
+                <option>Endurance</option>
+                <option>General Fitness</option>
+              </select>
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn btn-secondary" onclick="prevStep(1)">
+                Back
+              </button>
+              <button class="btn btn-primary" onclick="nextStep(3)">
+                Next: Schedule
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Schedule -->
+          <div id="step3" class="step-content">
+            <h2 class="section-title">Select Date & Time</h2>
+
+            <div class="calendar">
+              <div class="calendar-header">
+                <div class="calendar-month">January 2026</div>
+                <div class="calendar-nav">
+                  <button>◀</button>
+                  <button>▶</button>
+                </div>
+              </div>
+              <div class="calendar-grid">
+                <div class="calendar-day disabled">1</div>
+                <div class="calendar-day disabled">2</div>
+                <div class="calendar-day disabled">3</div>
+                <div class="calendar-day" onclick="selectDate('Jan 20')">
+                  20
+                </div>
+                <div class="calendar-day" onclick="selectDate('Jan 21')">
+                  21
+                </div>
+                <div class="calendar-day" onclick="selectDate('Jan 22')">
+                  22
+                </div>
+                <div class="calendar-day" onclick="selectDate('Jan 23')">
+                  23
+                </div>
+                <div class="calendar-day" onclick="selectDate('Jan 24')">
+                  24
+                </div>
+                <div class="calendar-day" onclick="selectDate('Jan 25')">
+                  25
+                </div>
+                <div class="calendar-day" onclick="selectDate('Jan 26')">
+                  26
+                </div>
+                <div class="calendar-day" onclick="selectDate('Jan 27')">
+                  27
+                </div>
+                <div class="calendar-day" onclick="selectDate('Jan 28')">
+                  28
+                </div>
+                <div class="calendar-day" onclick="selectDate('Jan 29')">
+                  29
+                </div>
+                <div class="calendar-day" onclick="selectDate('Jan 30')">
+                  30
+                </div>
+              </div>
+            </div>
+
+            <h3
+              style="font-size: 1.2rem; font-weight: 700; margin-bottom: 15px"
+            >
+              Available Time Slots
+            </h3>
+            <div class="time-slots">
+              <div class="time-slot" onclick="selectTime('6:00 AM')">
+                6:00 AM
+              </div>
+              <div class="time-slot" onclick="selectTime('8:00 AM')">
+                8:00 AM
+              </div>
+              <div class="time-slot unavailable">10:00 AM</div>
+              <div class="time-slot" onclick="selectTime('12:00 PM')">
+                12:00 PM
+              </div>
+              <div class="time-slot" onclick="selectTime('2:00 PM')">
+                2:00 PM
+              </div>
+              <div class="time-slot" onclick="selectTime('4:00 PM')">
+                4:00 PM
+              </div>
+              <div class="time-slot unavailable">6:00 PM</div>
+              <div class="time-slot" onclick="selectTime('8:00 PM')">
+                8:00 PM
+              </div>
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn btn-secondary" onclick="prevStep(2)">
+                Back
+              </button>
+              <button class="btn btn-primary" onclick="nextStep(4)">
+                Next: Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4: Details -->
+          <div id="step4" class="step-content">
+            <h2 class="section-title">Session Details</h2>
+
+            <div class="form-group">
+              <label class="form-label">Fitness Goals</label>
+              <textarea
+                class="form-textarea"
+                placeholder="Describe your fitness goals and what you want to achieve..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Current Fitness Level</label>
+              <select class="form-select">
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Medical Conditions / Injuries</label>
+              <textarea
+                class="form-textarea"
+                placeholder="Any medical conditions, injuries, or limitations we should know about..."
+              ></textarea>
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="recurring" />
+              <label for="recurring"
+                >Make this a recurring session (weekly)</label
+              >
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn btn-secondary" onclick="prevStep(3)">
+                Back
+              </button>
+              <button class="btn btn-primary" onclick="confirmBooking()">
+                Confirm Booking
+              </button>
+            </div>
+          </div>
+
+          <!-- Success Message -->
+          <div id="successMessage" class="step-content">
+            <div class="success-message">
+              <div class="success-icon">✅</div>
+              <h2 class="success-title">Session Booked!</h2>
+              <p class="success-text">
+                Your training session has been confirmed. Your trainer will
+                contact you 24 hours before the session.
+              </p>
+              <button
+                class="btn btn-primary"
+                onclick="location.href='#home'"
+                style="flex: none; padding: 15px 40px"
+              >
+                Back to Home
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-summary">
+          <h3 class="summary-title">Booking Summary</h3>
+          <div class="summary-item">
+            <div class="summary-label">Trainer</div>
+            <div class="summary-value" id="summaryTrainer">-</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-label">Specialty</div>
+            <div class="summary-value" id="summarySpecialty">-</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-label">Session Duration</div>
+            <div class="summary-value" id="summaryDuration">-</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-label">Date</div>
+            <div class="summary-value" id="summaryDate">-</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-label">Time</div>
+            <div class="summary-value" id="summaryTime">-</div>
+          </div>
+          <div class="summary-price">
+            <div class="price-breakdown">
+              <div class="price-row">
+                <span>Base Rate:</span>
+                <span id="baseRate">$0</span>
+              </div>
+              <div class="price-row">
+                <span>Duration Multiplier:</span>
+                <span id="multiplier">×1</span>
+              </div>
+            </div>
+            <div style="border-top: 2px solid #e0e0e0; padding-top: 15px">
+              <div style="font-size: 0.9rem; color: #666; margin-bottom: 10px">
+                Total Price
+              </div>
+              <div class="total-price" id="totalPrice">$0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
