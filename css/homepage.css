@@ -226,6 +226,11 @@
   vertical-align: middle;
 }
 
+.quick-action-card a{
+  text-decoration: none;
+  color: black;
+}
+
 .quick-action-label {
   font-weight: 700;
   font-size: 1.1rem;
