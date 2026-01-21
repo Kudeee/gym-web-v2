@@ -1,4 +1,4 @@
-@import url('GENERAL-LAYOUT.css');
+@import url("GENERAL-LAYOUT.css");
 
 body {
   min-height: 100vh;
@@ -7,11 +7,11 @@ body {
 
 .container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .image {
-  flex: 0 0 60%;
+  flex: 0 0 50%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   background-image: url("../assests/images/gym-interior.webp");
@@ -31,7 +31,7 @@ body {
 .form-container {
   display: flex;
   flex-direction: column;
-  flex: 0 0 40%;
+  flex: 0 0 50%;
   margin: 0 auto;
   padding: 80px;
 
@@ -112,6 +112,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .selection-card {
@@ -146,12 +147,74 @@ body {
   margin-top: 60px;
 }
 
-.already-have-account a{
+.already-have-account a {
   color: #ff6a2a;
   cursor: pointer;
   text-decoration: none;
 }
 
 .already-have-account a:hover {
-  color:#1d1d4f;
+  color: #1d1d4f;
+}
+
+.payment-option {
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.payment-option:hover {
+  border-color: #ff6a2a;
+}
+
+.payment-option input[type="radio"] {
+  display: none;
+}
+
+.payment-option-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.payment-option-name::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 2px solid #999;
+  border-radius: 50%;
+}
+
+.payment-option input[type="radio"]:checked + .payment-option-name::before {
+  border-color: #e85d21;
+  background: #ff6a2a;
+}
+
+.card-payment-info {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.payment-option input[type="radio"]:checked ~ .card-payment-info {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 16px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
 }
