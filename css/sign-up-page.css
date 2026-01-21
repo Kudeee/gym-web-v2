@@ -75,8 +75,11 @@ body {
 .row {
   display: flex;
   gap: 12px;
-  justify-content: space-between;
 }
+
+.row > div {
+  flex: 1;
+} 
 
 .form-btn {
   display: flex;
@@ -212,9 +215,4 @@ label {
   font-weight: 600;
   display: block;
   margin-bottom: 6px;
-}
-
-.row {
-  display: flex;
-  gap: 12px;
 }
