@@ -2,7 +2,7 @@ const header = `
         <div class="header-content">
             <div class="logo">
             <a href="landing-page.html">
-                FIT<span> HAPPENS</span>
+                <img src="assests/logo/society-fit.png" alt="">
             </a></div>
             <ul class="header-nav">
                 <li><a href="homepage.html">Home</a></li>

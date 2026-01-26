@@ -29,17 +29,18 @@ body {
   align-items: center;
 }
 
-.logo a {
+/* .logo a {
   color: white;
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
-}
+} */
 
-.logo span {
-  color: #ff6b35;
+.logo img{
+  width: 160px;
+  display: block;
 }
 
 .header-nav {
