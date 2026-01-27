@@ -103,11 +103,13 @@ body {
 }
 
 .header {
-  margin-bottom: 30px;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
 }
 
-.header span {
-  color: #ff6b35;
+.header img {
+  width: 160px;
 }
 
 .selection-cards {

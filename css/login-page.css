@@ -67,7 +67,13 @@ body {
 }
 
 .logo {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+  width: 160px;
 }
 
 .forgot-password {
