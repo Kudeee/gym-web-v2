@@ -1,7 +1,7 @@
 const header = `
         <div class="header-content">
             <div class="logo">
-            <a href="landing-page.html">
+            <a href="index.html">
                 <img src="assests/logo/society-fit.png" alt="">
             </a></div>
             <ul class="header-nav">
