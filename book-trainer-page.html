@@ -7,24 +7,7 @@
     <title>Book a Trainer</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header-content">
-        <div class="logo">FIT<span>LIFE</span></div>
-        <ul class="header-nav">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#trainers">Trainers</a></li>
-          <li><a href="#dashboard">Dashboard</a></li>
-        </ul>
-        <div class="user-profile">
-          <div>
-            <div style="font-weight: 600">John Doe</div>
-            <div style="font-size: 0.85rem; color: #ff6b35">Premium Member</div>
-          </div>
-          <div class="user-avatar">JD</div>
-        </div>
-      </div>
-    </header>
+    <header class="header header-js"></header>
 
     <div class="container">
       <div class="booking-layout">
@@ -69,7 +52,7 @@
                   </div>
                 </div>
                 <div class="trainer-price">
-                  <div class="price-value">$75</div>
+                  <div class="price-value">₱500</div>
                   <div class="price-label">/session</div>
                 </div>
               </div>
@@ -89,7 +72,7 @@
                   </div>
                 </div>
                 <div class="trainer-price">
-                  <div class="price-value">$80</div>
+                  <div class="price-value">₱600</div>
                   <div class="price-label">/session</div>
                 </div>
               </div>
@@ -109,7 +92,7 @@
                   </div>
                 </div>
                 <div class="trainer-price">
-                  <div class="price-value">$70</div>
+                  <div class="price-value">₱550</div>
                   <div class="price-label">/session</div>
                 </div>
               </div>
@@ -365,7 +348,7 @@
             <div class="price-breakdown">
               <div class="price-row">
                 <span>Base Rate:</span>
-                <span id="baseRate">$0</span>
+                <span id="baseRate">₱0</span>
               </div>
               <div class="price-row">
                 <span>Duration Multiplier:</span>
@@ -376,11 +359,13 @@
               <div style="font-size: 0.9rem; color: #666; margin-bottom: 10px">
                 Total Price
               </div>
-              <div class="total-price" id="totalPrice">$0</div>
+              <div class="total-price" id="totalPrice">₱0</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="js/header.js"></script>
+    <script src="js/book-trainer-page.js"></script>
   </body>
 </html>

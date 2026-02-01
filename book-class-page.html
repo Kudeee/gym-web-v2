@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,24 +7,7 @@
     <title>Book a Class</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header-content">
-        <div class="logo">FIT<span>LIFE</span></div>
-        <ul class="header-nav">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#trainers">Trainers</a></li>
-          <li><a href="#dashboard">Dashboard</a></li>
-        </ul>
-        <div class="user-profile">
-          <div>
-            <div style="font-weight: 600">John Doe</div>
-            <div style="font-size: 0.85rem; color: #ff6b35">Premium Member</div>
-          </div>
-          <div class="user-avatar">JD</div>
-        </div>
-      </div>
-    </header>
+    <header class="header header-js"></header>
 
     <div class="container">
       <div class="booking-layout">
@@ -53,42 +36,36 @@
             <h2 class="section-title">Choose Your Class</h2>
             <div class="class-grid">
               <div class="class-option" onclick="selectClass('HIIT Training')">
-                <div class="class-icon">🔥</div>
                 <div class="class-name">HIIT Training</div>
                 <div class="class-description">
                   High-intensity interval training for maximum calorie burn
                 </div>
               </div>
               <div class="class-option" onclick="selectClass('Yoga Flow')">
-                <div class="class-icon">🧘</div>
                 <div class="class-name">Yoga Flow</div>
                 <div class="class-description">
                   Mind-body connection through flowing movements
                 </div>
               </div>
               <div class="class-option" onclick="selectClass('CrossFit')">
-                <div class="class-icon">🏋️</div>
                 <div class="class-name">CrossFit</div>
                 <div class="class-description">
                   Functional fitness and strength training
                 </div>
               </div>
               <div class="class-option" onclick="selectClass('Boxing')">
-                <div class="class-icon">🥊</div>
                 <div class="class-name">Boxing</div>
                 <div class="class-description">
                   Combat training for fitness and confidence
                 </div>
               </div>
               <div class="class-option" onclick="selectClass('Spin Class')">
-                <div class="class-icon">🚴</div>
                 <div class="class-name">Spin Class</div>
                 <div class="class-description">
                   Indoor cycling for cardio endurance
                 </div>
               </div>
               <div class="class-option" onclick="selectClass('Pilates')">
-                <div class="class-icon">💪</div>
                 <div class="class-name">Pilates</div>
                 <div class="class-description">
                   Core strength and body alignment
@@ -225,7 +202,7 @@
                 You're all set for your class. We've sent a confirmation email
                 with all the details.
               </p>
-              <button class="btn btn-primary" onclick="location.href='#home'">
+              <button class="btn btn-primary" onclick="location.href = '#home'">
                 Back to Home
               </button>
             </div>
@@ -260,5 +237,8 @@
         </div>
       </div>
     </div>
+
+    <script src="js/header.js"></script>
+    <script src="js/book-class-page.js"></script>
   </body>
 </html>
