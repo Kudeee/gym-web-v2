@@ -1,33 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/renew-membership.css" />
-    <title>Renew Membership</title>
-  </head>
-  <body>
-
-    <header class="header">
-      <a href="homepage.html">
-        <img src="assests/logo/society-fit.png" alt="">
-      </a>
-    </header>
-
-    <div class="container">
-      <div class="containers">
-        <div class="card">
-          <h1>Premium Plan</h1>
-          <h2>₱ 899</h2>
-
-          <p>• All Basic Features</p>
-          <p>• Locker Access</p>
-          <p>• Group Classes</p>
-        </div>
-      </div>
-
-      <div class="containers">
-        <form action="">
+const paymentMethod = `
           <h3>Payments Method</h3>
 
           <label class="payment-option">
@@ -79,10 +50,6 @@
               </div>
             </div>
           </label>
+`
 
-          <button>RENEW</button>
-        </form>
-      </div>
-    </div>
-  </body>
-</html>
+document.querySelector('.payment-method-js').innerHTML = paymentMethod;

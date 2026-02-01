@@ -1,4 +1,5 @@
 @import url("GENERAL-LAYOUT.css");
+@import url("payment-method.css");
 
 body {
   min-height: 100vh;
@@ -160,63 +161,6 @@ body {
 
 .already-have-account a:hover {
   color: #1d1d4f;
-}
-
-.payment-option {
-  display: block;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  padding: 16px;
-  cursor: pointer;
-}
-
-.payment-option:hover {
-  border-color: #ff6a2a;
-}
-
-.payment-option input[type="radio"] {
-  display: none;
-}
-
-.payment-option-name {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-}
-
-.payment-option-name::before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  border: 2px solid #999;
-  border-radius: 50%;
-}
-
-.payment-option input[type="radio"]:checked + .payment-option-name::before {
-  border-color: #e85d21;
-  background: #ff6a2a;
-}
-
-.card-payment-info {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.payment-option input[type="radio"]:checked ~ .card-payment-info {
-  max-height: 300px;
-  opacity: 1;
-  margin-top: 16px;
-}
-
-label {
-  font-size: 13px;
-  font-weight: 600;
-  /* display: block; */
-  margin-bottom: 6px;
 }
 
 h2 {
