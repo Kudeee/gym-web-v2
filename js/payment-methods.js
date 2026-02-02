@@ -54,6 +54,8 @@ const paymentMethod = `
 
 document.querySelector('.payment-method-js').innerHTML = paymentMethod;
 
+const currentPage = window.location.pathname.split('/').pop();
+
 if(currentPage === 'book-class-page.html' || currentPage === 'book-trainer-page.html'){
 document.getElementById('head-title').style.display = 'none';
 }
