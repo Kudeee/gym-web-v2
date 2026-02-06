@@ -1,52 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login-page.css">
-    <link rel="stylesheet" href="components/css/loading-component.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/login-page.css" />
+    <link rel="stylesheet" href="components/css/loading-component.css" />
     <title>Login</title>
-</head>
-<body>
-   <div class="container">
-    
-    <div class="login-container">
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-container">
         <div class="logo">
-            <a href="index.html">
-            <img src="assests/logo/society-fit.png" alt="society-fit logo">
+          <a href="index.html">
+            <img src="assests/logo/society-fit.png" alt="society-fit logo" />
           </a>
         </div>
 
         <h1>Welcome Back!</h1>
 
         <form onsubmit="handleLogin(event)">
+          <label for="">Email</label>
+          <input type="email" placeholder="Enter your Email" />
 
-            <label for="">Email</label>
-            <input type="email" placeholder="Enter your Email">
+          <label for="">Password</label>
+          <input type="password" placeholder="Enter Password" />
 
-            <label for="">Password</label>
-            <input type="password" placeholder="Enter Password">
+          <div class="forgot-password">
+            <a href="">Forgot Password?</a>
+          </div>
 
-            <div class="forgot-password">
-                <a href="">Forgot Password?</a>
-            </div>
+          <div class="form-btn">
+            <button class="button" type="submit">Log In</button>
+          </div>
 
-            <div class="form-btn">
-                <button class="button" type="submit">Log In</button>
-            </div>
-
-            <div class="dont-have-acc">
-                Don't have an account? <a href="sign-up-page.html">Sign up here</a>
-            </div>
+          <div class="dont-have-acc">
+            Don't have an account? <a href="sign-up-page.html">Sign up here</a>
+          </div>
         </form>
+      </div>
+
+      <div class="image">
+        <div class="carousel-track">
+          <div class="slide">
+            <img src="assests/images/ca2.jpg" alt="" />
+            <div class="slide-text">
+              <h2>Welcome Back</h2>
+              <p>Log in to continue your fitness journey</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="assests/images/car1.jpg" alt="" />
+            <div class="slide-text">
+              <h2>Back for More?</h2>
+              <p>Let’s keep pushing your limits</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="assests/images/car3.jpg" alt="" />
+            <div class="slide-text">
+              <h2>Stay Consistent</h2>
+              <p>Results Will Follow</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div id="loading"></div>
 
-    <div class="image"></div>
-    
-   </div>
-   <div id="loading"></div>
-
-   <script src="components/loading.js"></script>
-   <script src="js/login.js"></script>
-</body>
+    <script src="components/loading.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/carousel.js"></script>
+  </body>
 </html>
