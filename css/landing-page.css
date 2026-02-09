@@ -228,6 +228,7 @@ h2 {
 
 .trainer-card {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .trainer-image img {
@@ -378,6 +379,86 @@ footer {
   left: 0;
   color: #22c55e; /* green */
   font-weight: bold;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 60px;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+}
+
+#trainers .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 2rem;
+}
+
+#trainers .trainer-card {
+  flex: 0 0 calc(33.333% - 1.333rem);
+  min-width: calc(33.333% - 1.333rem);
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 107, 53, 0.9);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.carousel-nav:hover {
+  background: rgba(255, 107, 53, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav.prev {
+  left: 0;
+}
+
+.carousel-nav.next {
+  right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  #trainers .trainer-card {
+    flex: 0 0 calc(50% - 1rem);
+    min-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  #trainers .trainer-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+  
+  .carousel-container {
+    padding: 0 50px;
+  }
+  
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {

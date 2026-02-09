@@ -164,8 +164,14 @@
     <section id="trainers">
       <div class="container">
         <h2>Meet our Trainers</h2>
+        <div class="carousel-container">
+          <button class="carousel-nav prev" onclick="prevTrainer()">‹</button>
+          <div class="carousel-wrapper">
+            <div class="grid carousel-track trainer-grid-js"></div>
+          </div>
+          <button class="carousel-nav next" onclick="nextTrainer()">›</button>
+        </div>
       </div>
-      <div class="grid carousel-track trainer-grid-js"></div>
     </section>
 
     <section id="events">
@@ -355,5 +361,5 @@
 
   <script src="js/landing-page.js"></script>
   <script type="module" src="components/meetOurTrainer.js"></script>
-  <script src="js/carousel.js"></script>
+  <script src="js/trainer-carousel.js"></script>
 </html>
