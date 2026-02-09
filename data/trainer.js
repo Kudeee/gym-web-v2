@@ -5,6 +5,8 @@ export const trainers = [
     specialty: "Yoga & Pilates Specialist",
     trainerBio:
       "With over 10 years of experience, Nadja helps clients improve flexibility, core strength, and mind-body connection through yoga and pilates.",
+    briefIntro:
+      "10+ years of experience improving flexibility, balance, and core strength.",
     exp: 10,
     clients: 200,
     rating: 4.9,
@@ -18,6 +20,8 @@ export const trainers = [
     specialty: "HIIT & CrossFit Coach",
     trainerBio:
       "Certified CrossFit Level 2 trainer with a passion for high-intensity workouts. Ping specializes in helping clients push their limits and achieve breakthrough results.",
+    briefIntro:
+      "High-energy coach focused on intense workouts and fast results.",
     exp: 8,
     clients: 200,
     rating: 4.9,
@@ -30,6 +34,8 @@ export const trainers = [
     specialty: "Strength & Conditioning Coach",
     trainerBio:
       "Marcus focuses on building strength, power, and endurance through structured weight training and performance programs.",
+    briefIntro:
+      "Expert in strength training and long-term performance development.",
     exp: 12,
     clients: 350,
     rating: 4.8,
@@ -48,6 +54,8 @@ export const trainers = [
     specialty: "Weight Loss & Nutrition Coach",
     trainerBio:
       "Alyssa helps clients lose weight sustainably by combining smart workouts with realistic nutrition strategies.",
+    briefIntro:
+      "Focused on sustainable weight loss through fitness and nutrition.",
     exp: 7,
     clients: 280,
     rating: 4.7,
@@ -65,6 +73,7 @@ export const trainers = [
     specialty: "Functional Training Specialist",
     trainerBio:
       "Neil designs functional workouts that improve mobility, balance, and everyday movement efficiency.",
+    briefIntro: "Improves everyday strength, movement, and mobility.",
     exp: 6,
     clients: 190,
     rating: 4.8,
@@ -82,6 +91,7 @@ export const trainers = [
     specialty: "Zumba & Dance Fitness Instructor",
     trainerBio:
       "Sofia makes fitness fun through energetic dance workouts that burn calories while boosting confidence.",
+    briefIntro: "Fun, high-energy dance workouts that burn calories fast.",
     exp: 9,
     clients: 400,
     rating: 4.9,
@@ -95,6 +105,7 @@ export const trainers = [
     specialty: "Bodybuilding Coach",
     trainerBio:
       "Ethan specializes in muscle growth, physique development, and competition-level bodybuilding prep.",
+    briefIntro: "Dedicated to muscle growth and physique transformation.",
     exp: 11,
     clients: 260,
     rating: 4.8,
@@ -113,6 +124,7 @@ export const trainers = [
     specialty: "Sports Performance Trainer",
     trainerBio:
       "Liam works with athletes to improve speed, agility, and explosive power for peak sports performance.",
+    briefIntro: "Helps athletes boost speed, power, and agility.",
     exp: 10,
     clients: 220,
     rating: 4.9,
@@ -125,6 +137,7 @@ export const trainers = [
     specialty: "Rehabilitation & Mobility Coach",
     trainerBio:
       "Maya helps clients recover from injuries and improve joint mobility through corrective exercises.",
+    briefIntro: "Focused on recovery, joint health, and pain-free movement.",
     exp: 8,
     clients: 175,
     rating: 4.8,
@@ -142,6 +155,8 @@ export const trainers = [
     specialty: "Beginner Fitness Coach",
     trainerBio:
       "Noah guides beginners step-by-step, building confidence and healthy habits in a supportive environment.",
+    briefIntro:
+      "Beginner-friendly coach focused on confidence and consistency.",
     exp: 5,
     clients: 150,
     rating: 4.7,
