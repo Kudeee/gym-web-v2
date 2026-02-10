@@ -1,5 +1,7 @@
 @import url('GENERAL-LAYOUT.css');
 @import url('carousel.css');
+@import url('../components/css/pop-up.css');
+@import url('../components/css/loading-component.css');
 
 body {
   min-height: 100vh;

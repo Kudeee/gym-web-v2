@@ -15,17 +15,17 @@ function nextStep(step) {
   const currentStep = document.querySelector(".step-content.active").id;
 
   if (currentStep === "step1" && !bookingData.class) {
-    alert("Please select a class before continuing");
+    showPopUP("Please select a class before continuing");
     return;
   }
 
   if (currentStep === "step2" && !bookingData.date) {
-    alert("Please select a date before continuing");
+    showPopUP("Please select a date before continuing");
     return;
   }
 
   if (currentStep === "step3" && !bookingData.time) {
-    alert("Please select a time slot before continuing");
+    showPopUP("Please select a time slot before continuing");
     return;
   }
 
@@ -90,7 +90,7 @@ function selectDate(date) {
 function selectTime(time) {
   // Check if the time slot is full
   if (event.target.closest(".time-slot").classList.contains("full")) {
-    alert("This time slot is fully booked. Please select another time.");
+    showPopUP("This time slot is fully booked. Please select another time.");
     return;
   }
 
@@ -158,6 +158,6 @@ async function confirmBooking() {
   } catch (error) {
      hideLoading();
     
-    alert("Something went wrong. Please try again.");
+    showPopUPE("Something went wrong. Please try again.");
   }
 }

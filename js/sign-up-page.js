@@ -1,74 +1,134 @@
+const validationRules = {
+  firstName: { 
+    selector: '#first-page input[placeholder="First name"]',
+    test: (val) => val.trim().length > 0,
+    message: "Please enter your first name"
+  },
+  lastName: {
+    selector: '#first-page input[placeholder="Last name"]',
+    test: (val) => val.trim().length > 0,
+    message: "Please enter your last name"
+  },
+  email: {
+    selector: '#first-page input[type="email"]',
+    test: (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val),
+    message: "Please enter a valid email address"
+  },
+  phone: {
+    selector: '#first-page input[type="tel"]',
+    test: (val) => /^(09|\+639)\d{9}$/.test(val.replace(/[-\s]/g, '')),
+    message: "Please enter a valid phone number (e.g., 09091234567)"
+  },
+  password: {
+    selector: '#second-page input[name="password"]',
+    test: (val) => val.length >= 8 && /[A-Z]/.test(val) && /[a-z]/.test(val) && /[0-9]/.test(val),
+    message: "Password must be 8+ characters with uppercase, lowercase, and numbers"
+  },
+  confirmPassword: {
+    selector: '#second-page input[name="confirm_password"]',
+    test: (val) => val === document.querySelector('#second-page input[name="password"]').value,
+    message: "Passwords do not match"
+  }
+};
+
+// Generic validator
+function validate(fields) {
+  for (let field of fields) {
+    const rule = validationRules[field];
+    const input = document.querySelector(rule.selector);
+    
+    if (!input || !rule.test(input.value)) {
+      showPopUP(rule.message);
+      input?.focus();
+      return false;
+    }
+  }
+  return true;
+}
+
+// Page-specific validations
+const validateFirstPage = () => validate(['firstName', 'lastName', 'email', 'phone']);
+const validateSecondPage = () => validate(['password', 'confirmPassword']);
+
+const validateMembershipPlan = () => {
+  if (!document.querySelector('input[name="membership-plan"]:checked')) {
+    showPopUP("Please select a membership plan");
+    return false;
+  }
+  return true;
+};
+
+const validateTerms = () => {
+  if (!document.getElementById('terms')?.checked) {
+    showPopUP("Please agree to the Terms and Conditions");
+    return false;
+  }
+  return true;
+};
+
+// ============================================
+// NAVIGATION (ULTRA-COMPACT)
+// ============================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const pages = {
+    first: document.getElementById("first-page"),
+    second: document.getElementById("second-page"),
+    third: document.getElementById("second-last-page"),
+    fourth: document.getElementById("last-page"),
+    sub: document.getElementById("sub-page")
+  };
+
+  const navigate = (from, to, validator) => {
+    if (validator && !validator()) return;
+    from.style.display = "none";
+    to.style.display = "block";
+  };
+
+  // Forward navigation with validation
+  document.getElementById("fnext-btn").onclick = () => 
+    navigate(pages.first, pages.second, validateFirstPage);
+  
+  document.getElementById("next-btn").onclick = () => 
+    navigate(pages.second, pages.third, validateSecondPage);
+  
+  document.getElementById("second-last-next-btn").onclick = () => 
+    navigate(pages.third, pages.fourth, validateMembershipPlan);
+  
+  document.getElementById("last-next-btn").onclick = () => 
+    navigate(pages.fourth, pages.sub);
+
+  // Back navigation (no validation needed)
+  document.getElementById("prev-btn").onclick = () => 
+    navigate(pages.second, pages.first);
+  
+  document.getElementById("second-last-prev-btn").onclick = () => 
+    navigate(pages.third, pages.second);
+  
+  document.getElementById("last-prev-btn").onclick = () => 
+    navigate(pages.fourth, pages.third);
+  
+  document.getElementById("sub-prev-btn").onclick = () => 
+    navigate(pages.sub, pages.fourth);
+});
+
+// ============================================
+// FORM SUBMISSION
+// ============================================
+
 async function handleSignUp(event) {
   event.preventDefault();
+  
+  if (!validateTerms()) return;
 
   showLoading("Signing Up");
-
+  
   try {
     await simulateLoading(2000);
-
     hideLoading();
-
     window.location.href = "../homepage.html";
   } catch (error) {
     hideLoading();
-    alert("Sign up failed");
+    showPopUP("Sign up failed. Please try again.");
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const fnext = document.getElementById("fnext-btn");
-  const sumbit = document.getElementById("submit-page");
-  const next = document.getElementById("next-btn");
-  const prev = document.getElementById("prev-btn");
-  const lastPrev = document.getElementById("last-prev-btn");
-  const lastNext = document.getElementById("last-next-btn");
-  const secondLastPrev = document.getElementById("second-last-prev-btn");
-  const secondLastNext = document.getElementById("second-last-next-btn");
-  const f_page = document.getElementById("first-page");
-  const s_page = document.getElementById("second-page");
-  const t_page = document.getElementById("second-last-page");
-  const l_page = document.getElementById("last-page");
-  const sub_page = document.getElementById("sub-page");
-  const subPrevBtn = document.getElementById("sub-prev-btn");
-  const subBtn = document.getElementById("submit-btn");
-
-  fnext.addEventListener("click", () => {
-    f_page.style.display = "none";
-    s_page.style.display = "block";
-  });
-
-  prev.addEventListener("click", () => {
-    f_page.style.display = "block";
-    s_page.style.display = "none";
-  });
-
-  next.addEventListener("click", () => {
-    s_page.style.display = "none";
-    t_page.style.display = "block";
-  });
-
-  secondLastPrev.addEventListener("click", () => {
-    s_page.style.display = "block";
-    t_page.style.display = "none";
-  });
-
-  secondLastNext.addEventListener("click", () => {
-    t_page.style.display = "none";
-    l_page.style.display = "block";
-  });
-
-  lastPrev.addEventListener("click", () => {
-    t_page.style.display = "block";
-    l_page.style.display = "none";
-  });
-
-  lastNext.addEventListener("click", () => {
-    l_page.style.display = "none";
-    sub_page.style.display = "block";
-  });
-
-  subPrevBtn.addEventListener("click", () => {
-    sub_page.style.display = "none";
-    l_page.style.display = "block";
-  });
-});

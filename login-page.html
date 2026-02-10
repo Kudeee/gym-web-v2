@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/login-page.css" />
-    <link rel="stylesheet" href="components/css/loading-component.css" />
     <title>Login</title>
   </head>
   <body>
@@ -19,10 +18,10 @@
         <h1>Welcome Back!</h1>
 
         <form onsubmit="handleLogin(event)">
-          <label for="">Email</label>
-          <input type="email" placeholder="Enter your Email" />
+          <label for="email">Email</label>
+          <input type="email" placeholder="Enter your Email"/>
 
-          <label for="">Password</label>
+          <label for="password">Password</label>
           <input type="password" placeholder="Enter Password" />
 
           <div class="forgot-password">
@@ -68,9 +67,11 @@
       </div>
     </div>
     <div id="loading"></div>
+    <div id="pop-up-render"></div>
 
     <script src="components/loading.js"></script>
     <script src="js/login.js"></script>
+    <script src="components/pop-up.js"></script>
     <script src="js/carousel.js"></script>
   </body>
 </html>

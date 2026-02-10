@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/sign-up-page.css" />
-    <link rel="stylesheet" href="components/css/loading-component.css" />
     <title>Sign Up</title>
   </head>
   <body>
@@ -25,22 +24,22 @@
             <div class="row">
               <div>
                 <label>First Name</label>
-                <input type="text" placeholder="First name" />
+                <input type="text" placeholder="First name" required/>
               </div>
 
               <div>
                 <label>Last Name</label>
-                <input type="text" placeholder="Last name" />
+                <input type="text" placeholder="Last name" required/>
               </div>
             </div>
 
             <label>Email Address</label>
-            <input type="email" placeholder="youremail@example.com" />
+            <input type="email" placeholder="youremail@example.com" required/>
 
             <div class="row">
               <div>
                 <label>Phone Number</label>
-                <input type="tel" placeholder="0909xx-xxx-xxxx" />
+                <input type="tel" placeholder="0909xx-xxx-xxxx" required/>
               </div>
 
               <div>
@@ -195,10 +194,12 @@
         </div>
       </div>
       <div id="loading"></div>
+      <div id="pop-up-render"></div>
     </div>
 
     <script src="js/sign-up-page.js"></script>
     <script src="js/payment-methods.js"></script>
+    <script src="components/pop-up.js"></script>
     <script src="components/loading.js"></script>
     <script src="js/carousel.js"></script>
   </body>

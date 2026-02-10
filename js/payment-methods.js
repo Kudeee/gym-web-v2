@@ -73,6 +73,6 @@ async function handlePayment(event) {
   } catch (error) {
     hideLoading();
 
-    alert("Something went wrong. Please try again.");
+    showPopUP("Something went wrong. Please try again.");
   }
 }

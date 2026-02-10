@@ -24,25 +24,25 @@ function nextStep(step) {
   const currentStep = document.querySelector(".step-content.active").id;
 
   if (currentStep === "step1" && !bookingData.trainer.name) {
-    alert("Please select a trainer before continuing");
+    showPopUP("Please select a trainer before continuing");
     return;
   }
 
   if (currentStep === "step2") {
     if (!bookingData.session.duration) {
-      alert("Please select a session duration before continuing");
+      showPopUP("Please select a session duration before continuing");
       return;
     }
     const focusArea = document.getElementById("focusArea").value;
     if (!focusArea) {
-      alert("Please select a focus area before continuing");
+      showPopUP("Please select a focus area before continuing");
       return;
     }
     bookingData.focusArea = focusArea;
   }
 
   if (currentStep === "step3" && (!bookingData.date || !bookingData.time)) {
-    alert("Please select both date and time before continuing");
+    showPopUP("Please select both date and time before continuing");
     return;
   }
 
@@ -145,7 +145,7 @@ function selectDate(date) {
 function selectTime(time) {
   // Check if the time slot is unavailable
   if (event.target.closest(".time-slot").classList.contains("unavailable")) {
-    alert("This time slot is not available. Please select another time.");
+    showPopUP("This time slot is not available. Please select another time.");
     return;
   }
 
@@ -179,7 +179,7 @@ async function confirmBooking() {
 
   // Validate fitness level
   if (!bookingData.fitnessLevel) {
-    alert("Please select your current fitness level");
+    showPopUP("Please select your current fitness level");
     return;
   }
 
@@ -221,6 +221,6 @@ async function confirmBooking() {
   } catch (error) {
     hideLoading();
 
-    alert("Something went wrong. Please try again.");
+    showPopUP("Something went wrong. Please try again.");
   }
 }
