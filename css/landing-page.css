@@ -83,6 +83,22 @@ section:first-of-type {
   margin-bottom: 2rem;
 }
 
+.button-container{
+  margin-top: auto;
+}
+
+.button-container a {
+  background: #ff6b35;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 10px 10px 10px;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -160,6 +176,10 @@ h2 {
   justify-content: center;
 }
 
+.pricing-toggle {
+  margin-bottom: 20px;
+}
+
 .pricing-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -167,6 +187,9 @@ h2 {
 }
 
 .pricing-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: white;
   padding: 2rem;
   border-radius: 10px;
@@ -177,11 +200,6 @@ h2 {
 
 .pricing-card:hover {
   transform: scale(1.05);
-}
-
-.pricing-card.featured {
-  background: #ff6b35;
-  color: white;
 }
 
 .price {

@@ -57,10 +57,14 @@ const validateFirstPage = () => validate(['firstName', 'lastName', 'email', 'pho
 const validateSecondPage = () => validate(['password', 'confirmPassword']);
 
 const validateMembershipPlan = () => {
-  if (!document.querySelector('input[name="membership-plan"]:checked')) {
+  const selectedPlan = document.querySelector('input[name="membership-plan"]:checked');
+  if (!selectedPlan) {
     showPopUP("Please select a membership plan");
     return false;
   }
+  
+  // Update receipt with selected plan price
+  updateReceipt(selectedPlan);
   return true;
 };
 
@@ -71,6 +75,21 @@ const validateTerms = () => {
   }
   return true;
 };
+
+function updateReceipt(selectedInput) {
+  const price = selectedInput.dataset.price;
+  const billing = selectedInput.dataset.billing;
+  const planName = selectedInput.value;
+  
+  const receiptRow = document.querySelector('.reciept-row');
+  const totalPrice = document.querySelector('.total-price');
+  
+  if (receiptRow && totalPrice) {
+    receiptRow.querySelector('.price').textContent = `₱${price}`;
+    receiptRow.querySelector('small').textContent = `Billed ${billing}`;
+    totalPrice.textContent = `₱${price}`;
+  }
+}
 
 // ============================================
 // NAVIGATION (ULTRA-COMPACT)

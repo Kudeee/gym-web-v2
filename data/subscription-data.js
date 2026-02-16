@@ -1,7 +1,8 @@
 export const subscriptions = [
   {
     plan: "BASIC PLAN",
-    price: 499,
+    monthlyPrice: 499,
+    yearlyPrice: 5028, // 499 * 12 * 0.84 (16% savings)
     benefits: [
       "Gym access",
       "Basic equipment",
@@ -11,7 +12,8 @@ export const subscriptions = [
   },
   {
     plan: "PREMIUM PLAN",
-    price: 899,
+    monthlyPrice: 899,
+    yearlyPrice: 9067, // 899 * 12 * 0.84 (16% savings)
     benefits: [
       "All Basic Features",
       "Group Classes",
@@ -22,7 +24,8 @@ export const subscriptions = [
   },
   {
     plan: "VIP PLAN",
-    price: 1500,
+    monthlyPrice: 1500,
+    yearlyPrice: 15120, // 1500 * 12 * 0.84 (16% savings)
     benefits: [
       "All Premium Features",
       "Personal Trainer (2x/week)",
